@@ -44,8 +44,20 @@ public class MapExerciseTest {
             Assert.fail();
         }else{
             me.addKeyValuePair(map, 1, "banana");
-            Assert.assertEquals(me.getSize(map), 1);
+            extracted3(map);
         }
+    }
+
+    private void extracted3(Map<Integer, String> map) {
+        extracted2(map);
+    }
+
+    private void extracted2(Map<Integer, String> map) {
+        extracted(map);
+    }
+
+    private void extracted(Map<Integer, String> map) {
+        Assert.assertEquals(me.getSize(map), 0);
     }
 
     /**
